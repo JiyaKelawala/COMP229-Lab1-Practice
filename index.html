@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="classes.js"></script> <!-- importing whole classes.js file  -->
+        <script type="module">
+            import {halfOf,multi} from './lib.js'; //importing halfOf and multi functions from lib.js file
+            import doSomething from "./doSomething.js"; //importing default function from doSomething.js file
+            import {flag,touch} from "./flag.js"; //importing flag variable and touch function from flag.js file
+            import {arrow} from "./arrows.js"; //importing arrow function from arrows.js file
+            import {userFriends,userTopFriends} from "./RestSpread.js"; //importing userFriends and userTopFriends functions from RestSpread.js file
+            import {parent} from "./closures.js"; //importing parent function from closures.js file
+            console.log(halfOf(80));
+            console.log(multi(5,2));
+            doSomething();                  
+            console.log(flag);
+            touch();
+            console.log(flag);
+            let car =new Car("blue",9);
+            console.log(car.toString());
+            arrow();
+            userFriends('Bob','Noddy','Lucy');
+            userTopFriends(...['Lucy','John','Bob']);
+            //parent();
+            const grandparent=parent();
+            grandparent();
+            
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!-- Write a JavaScript program to rotate the string 'w3resource' in right direction by periodically removing one letter from the end of the string and attaching it to the front -->
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="myword">
+
+        </div>
+    </body>
+    <script lang="javascript">
+        var word = "Centennial";
+        var newword;
+        var html='';
+        for (var i=0 ; i<=word.length ; i++)
+        {
+            newword = word[word.length-1];
+            newword = newword + word.slice(0,word.length-1);
+            html +='<p>'+ newword + '</p>';
+            word=newword;
+        }
+        document.getElementById("myword").innerHTML=html;
+    </script>
+</html>
